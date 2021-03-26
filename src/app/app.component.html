@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row mt-3 justify-content-center align-items-center">
+        <div class="card w-50 ">
+            <div class="card-header">Email Notification</div>
+            <div class="card-body">
+
+                <form [formGroup]="emailNotification" (ngSubmit)="onFormSubmit(emailNotification.value)">
+                    <mat-grid-list cols="1" rowHeight="200px">
+                        <mat-grid-tile>
+                            <div class="controles-container">
+                                <mat-form-field>
+
+                                    <input matInput formControlName="name" placeholder="Full Name *" />
+                                    <mat-error>This field must be 4 characters.</mat-error>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <input formControlName="email" matInput placeholder="Email *">
+                                    <!-- <mat-error>Invalid email address.</mat-error> -->
+
+                                </mat-form-field>
+
+                                <div class="button-row">
+                                    <button mat-raised-button color="primary" type="submit">
+                                        Send Notification</button>
+
+                                </div>
+                            </div>
+                        </mat-grid-tile>
+
+                    </mat-grid-list>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
